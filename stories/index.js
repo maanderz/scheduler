@@ -6,7 +6,7 @@ import { action } from "@storybook/addon-actions";
 import "index.scss";
 
 import Button from "components/Button";
-import DayList from "components/DayListItem";
+import DayListItem from "components/DayListItem";
 
 storiesOf("Button", module)
   .addParameters({
@@ -23,3 +23,10 @@ storiesOf("Button", module)
       Disabled
     </Button>
   ));
+
+storiesOf("DayListItem", module)
+  .addParameters({
+    background: [{ name: "dark", value: "#222f3e", default: true }]
+  })
+  .add("Unselected", () => <DayListItem name="Monday" spots={5}/>)
+  
