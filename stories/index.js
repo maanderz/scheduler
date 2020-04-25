@@ -26,7 +26,11 @@ storiesOf("Button", module)
 
 storiesOf("DayListItem", module)
   .addParameters({
-    background: [{ name: "dark", value: "#222f3e", default: true }]
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
   })
-  .add("Unselected", () => <DayListItem name="Monday" spots={5}/>)
-  
+  .add("Unselected", () => <DayListItem name="Monday" spots={5} />)
+  .add("Selected", () => <DayListItem name="Monday" spots={5} selected />) 
+  .add("Full", () => <DayListItem name="Monday" spots={0} />)
+  .add("Clickable", () => (
+    <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
+  ));
