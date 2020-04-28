@@ -19,7 +19,6 @@ export default function DayListItem(props) {
   });
 
   const formatSpots = () => {
-    console.log('spots',props.spots)
     if (props.spots === 0) {
       return setModSpot('no spots remaining');
     } 
