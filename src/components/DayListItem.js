@@ -6,7 +6,7 @@ const classNames = require('classnames');
 export default function DayListItem(props) {
   useEffect(() => {
     formatSpots();
-  });
+  }, []);
 
   const [hover, setHover] = useState(false);
   const toggleHover = () => setHover(!hover);
