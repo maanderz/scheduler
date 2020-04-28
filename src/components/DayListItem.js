@@ -22,7 +22,7 @@ export default function DayListItem(props) {
     if (props.spots === 0) {
       return setModSpot('no spots remaining');
     } 
-    if (props.spots > 1){
+    if (props.spots >= 1){
       if (props.spots === 1){
         setModSpot(`1 spot remaining`);
       } else {
