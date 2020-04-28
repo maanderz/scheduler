@@ -4,7 +4,7 @@ import "components/DayListItem.scss"
 const classNames = require('classnames');
 
 export default function DayListItem(props) {
-  useEffect(()=> {
+  useEffect(() => {
     formatSpots();
   });
 
@@ -19,8 +19,16 @@ export default function DayListItem(props) {
   });
 
   const formatSpots = () => {
-    if (props.spots === 0){
-      setModSpot('no spots remaining');
+    console.log('spots',props.spots)
+    if (props.spots === 0) {
+      return setModSpot('no spots remaining');
+    } 
+    if (props.spots > 1){
+      if (props.spots === 1){
+        setModSpot(`1 spot remaining`);
+      } else {
+        setModSpot(`${props.spots} spots remaining`);
+      }
     }
   };
 
