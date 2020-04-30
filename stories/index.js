@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import Button from "components/Button";
 import DayListItem from "components/DayListItem";
 import DayList from "components/DayList"
+import InterviewerListItem from "components/InterviewerListItem";
 
 storiesOf("Button", module)
   .addParameters({
