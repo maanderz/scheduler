@@ -164,6 +164,4 @@ storiesOf("Status", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]
   })
-  .add("Status", () => (
-    <Status/>)
-  )
+  .add("Status", () => <Status message="Deleting"/>)
