@@ -182,4 +182,17 @@ storiesOf("Form", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]
   })
-  .add("Empty form", () => <Form interviewers={interviewers} />)
+  .add("Empty form", () => (
+    <Form
+      interviewers={interviewers}
+      interviewer={1}
+      setInterviewer={action("setInterviewer")}
+    />
+  ))
+  .add("Edit form", () => (
+    <Form
+      interviewers={interviewers}
+      interviewer={1}
+      setInterviewer={action("setInterviewer")} 
+    />
+  ));
