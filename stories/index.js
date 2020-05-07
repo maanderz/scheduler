@@ -170,6 +170,9 @@ storiesOf("Error", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]
   })
-  .add("Error", () =>
-    <Error />
-  );
+  .add("Error", () => (
+    <Error 
+      message="Could not delete appointment."
+      onClose={action("onClose")}
+      />
+  ));
