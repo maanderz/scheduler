@@ -191,8 +191,11 @@ storiesOf("Form", module)
   ))
   .add("Edit form", () => (
     <Form
+      name="Mandy"
       interviewers={interviewers}
       interviewer={1}
-      setInterviewer={action("setInterviewer")} 
+      setInterviewer={action("setInterviewer")}
+      onSave={action("onSave")}
+      onCancel={action("onCancel")}
     />
   ));
