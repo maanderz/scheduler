@@ -202,5 +202,7 @@ storiesOf("Form", module)
   .add("Create form", () => (
     <Form
       interviewers={interviewers}
+      onSave={action("onSave")}
+      onCancel={action("onCancel")}
     />
   ));
