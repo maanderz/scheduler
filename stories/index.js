@@ -193,7 +193,6 @@ storiesOf("Form", module)
     <Form
       name="Mandy"
       interviewers={interviewers}
-      interviewer={1}
       setInterviewer={action("setInterviewer")}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
