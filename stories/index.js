@@ -196,7 +196,6 @@ storiesOf("Form", module)
       setInterviewer={action("setInterviewer")}
       interviewer={1}
       onSave={action("onSave")}
-      onCancel={action("onCancel")}
     />
   ))
   .add("Create form", () => (
