@@ -202,6 +202,5 @@ storiesOf("Form", module)
     <Form
       interviewers={interviewers}
       onSave={action("onSave")}
-      onCancel={action("onCancel")}
     />
   ));
