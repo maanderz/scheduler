@@ -194,6 +194,7 @@ storiesOf("Form", module)
       name="Mandy"
       interviewers={interviewers}
       setInterviewer={action("setInterviewer")}
+      interviewer={1}
       onSave={action("onSave")}
       onCancel={action("onCancel")}
     />
