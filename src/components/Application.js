@@ -74,7 +74,6 @@ export default function Application(props) {
         <Appointment
           key={apt.id}
           time={apt.time}
-
         />
       )
     }
