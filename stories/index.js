@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "index.scss";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -147,6 +147,12 @@ storiesOf("Appointment", module)
       onEdit={action("onEdit")}
       onDelete={action("onDelete")}
     />
+  ))
+  .add("Appointment Empty", () => (
+    <Fragment>
+      <Appointment id={1} time="12pm" />
+      <Appointment id="last" time="1pm" />
+    </Fragment>
   ));
 
 storiesOf("Confirm", module)
