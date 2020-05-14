@@ -62,8 +62,12 @@ const appointments = [
 ];
 
 export default function Application(props) {
-
   const [day, setDay] = useState('Monday');
+  const appointmentList = appointments.map(apt => {
+    return (
+      <Appointment time={apt.time}/>
+    )
+  })
 
   return (
     <main className="layout">
@@ -88,7 +92,7 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-        {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
+        { appointmentList }
       </section>
     </main>
   );
