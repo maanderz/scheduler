@@ -64,9 +64,20 @@ const appointments = [
 export default function Application(props) {
   const [day, setDay] = useState('Monday');
   const appointmentList = appointments.map(apt => {
-    return (
-      <Appointment time={apt.time}/>
-    )
+    if (apt.id == appointments.length) {
+      return <Appointment
+        key="last"
+        time={apt.time}
+      />
+    } else {
+      return (
+        <Appointment
+          key={apt.id}
+          time={apt.time}
+
+        />
+      )
+    }
   })
 
   return (
@@ -92,7 +103,7 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-        { appointmentList }
+        {appointmentList}
       </section>
     </main>
   );
