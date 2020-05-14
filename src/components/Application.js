@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "components/Application.scss";
 import DayList from "components/DayList";
+import Appointment from "components/Appointment"
 
 const days = [
   {
@@ -24,7 +25,7 @@ const days = [
 const appointments = [
   {
     id: 1,
-    time: "12pm",
+    time: "12pm"
   },
   {
     id: 2,
@@ -34,7 +35,7 @@ const appointments = [
       interviewer: {
         id: 1,
         name: "Sylvia Palmer",
-        avatar: "https://i.imgur.com/LpaY82x.png",
+        avatar: "https://i.imgur.com/LpaY82x.png"
       }
     }
   },
@@ -46,25 +47,17 @@ const appointments = [
       interviewer: {
         id: 1,
         name: "Sylvia Palmer",
-        avatar: "https://i.imgur.com/LpaY82x.png",
+        avatar: "https://i.imgur.com/LpaY82x.png"
       }
     }
   },
   {
     id: 4,
-    time: "3pm",
-    interview: {
-      student: "Lydia Miller-Jones",
-      interviewer: {
-        id: 1,
-        name: "Sylvia Palmer",
-        avatar: "https://i.imgur.com/LpaY82x.png",
-      }
-    }
+    time: "3pm"
   },
   {
     id: 5,
-    time: "9pm",
+    time: "9pm"
   }
 ];
 
