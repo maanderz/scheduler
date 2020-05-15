@@ -64,8 +64,8 @@ const appointments = [
 export default function Application(props) {
   const [day, setDay] = useState('Monday');
   const appointmentList = appointments.map(appointment => {
-    // if (apt.id == appointments.length) 
-    return <Appointment key={appointment.id} {...appointment} />
+    return (appointment.id == appointments.length) ?
+      <Appointment key="last" {...appointment} /> : <Appointment key={appointment.id} {...appointment} />
   })
 
   return (
